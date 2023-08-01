@@ -16,6 +16,7 @@ rules:
     references:
       - https://twitter.com/BlockSecTeam/status/1685697530858729473
       - https://twitter.com/vyperlang/status/1685692973051498497
+      - https://twitter.com/big_tech_sux/status/1686417276680192001
 
   patterns:
     - pattern-either:
