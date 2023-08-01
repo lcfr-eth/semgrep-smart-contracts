@@ -1,0 +1,28 @@
+rules:
+- id: insecure-vyper-version-nonreentrantcy
+  languages:
+    - generic
+  message: "Insecure Vyper versions used with nonreentrant."
+  severity: WARNING
+  metadata:
+    category: security
+    technology:
+      - vyper
+    confidence: HIGH
+    likelihood: HIGH
+    impact: HIGH
+    subcategory:
+        - vuln
+    references:
+      - https://twitter.com/BlockSecTeam/status/1685697530858729473
+      - https://twitter.com/vyperlang/status/1685692973051498497
+
+  patterns:
+    - pattern-either:
+       - pattern-inside: |
+          @version ^0.2.15
+       - pattern-inside: |
+          @version ^0.2.16
+       - pattern-inside: |
+          @version ^0.3.0
+       - pattern: nonreentrant(...)
