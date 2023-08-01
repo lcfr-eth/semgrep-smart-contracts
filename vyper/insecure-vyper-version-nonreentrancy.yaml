@@ -26,4 +26,6 @@ rules:
           @version ^0.2.16
        - pattern-inside: |
           @version ^0.3.0
-       - pattern: nonreentrant(...)
+       - pattern: |
+          nonreentrant(...)
+          ...
